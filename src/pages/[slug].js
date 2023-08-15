@@ -71,7 +71,7 @@ export default function BlogPost({ post }) {
       <div className={Style.topHeader}>
         <div
           className={Style.description}
-        dangerouslySetInnerHTML={{ __html: post.description.html }}
+          dangerouslySetInnerHTML={{ __html: post.description.html }}
         />
         <div className={Style.authorInfo}>
           <img
@@ -87,10 +87,12 @@ export default function BlogPost({ post }) {
       </div>
       <div className={Style.container}>
         <div className={Style.imgContainer}>
-          <div
+          <Image
             className={Style.coverImage}
-            style={{ backgroundImage: `url(${post.coverPhoto.url})` }}
-          ></div>
+            src={post.coverPhoto.url}
+            width="100"
+            height="100"
+          />
         </div>
         <div className={Style.contentContainer}>
           <div className={Style.contentHeader}>
