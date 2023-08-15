@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200;0,6..72,300;0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,300;1,6..72,400;1,6..72,500;1,6..72,600;1,6..72,700&display=swap");
+
+:root {
+  --max-width: 1200px;
+  --border-radius: 12px;
+  --font: "Newsreader", serif;
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Newsreader", serif;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  font-family: "Newsreader", serif;
+}
+a {
+  text-decoration: none;
+  color: #181818;
+  transition: all 0.5s ease-in;
+  font-size: 1.3rem;
+  font-weight: 600;
+  &:hover {
+    color: #df0202;
+  }
+}

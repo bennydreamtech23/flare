@@ -1,0 +1,138 @@
+// SinglePost.module.scss
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.imgContainer {
+  width: 100%;
+  max-width: 60%;
+  margin-bottom: 20px;
+  @media only screen and (min-width: 300px) and (max-width: 767px) {
+    max-width: 100%;
+  }
+}
+
+.coverImage {
+  width: 100%;
+  height: 100vh; /* Set the desired height */
+  background-size: cover;
+  background-position: center;
+}
+
+.contentContainer {
+  width: 100%;
+  max-width: 70%;
+  margin-top: 1.5rem;
+  @media only screen and (min-width: 300px) and (max-width: 767px) {
+    max-width: 100%;
+  }
+  .contentHeader {
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media only screen and (min-width: 300px) and (max-width: 767px) {
+      flex-direction: column;
+      align-items: start;
+    }
+  }
+}
+
+.title {
+  font-size: 3.5rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  @media only screen and (min-width: 768px) and (max-width: 1023px) {
+    font-size: 2.7rem;
+  }
+  @media only screen and (min-width: 300px) and (max-width: 767px) {
+    font-size: 2.5rem;
+  }
+}
+
+.authorInfo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.authorDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.authorName {
+  font-size: 1.25rem;
+  font-weight: 500;
+  font-weight: bold;
+  margin: 0;
+}
+
+.publishedDate {
+  font-size: 1rem;
+  font-weight: 300;
+  color: gray;
+  margin: 0;
+}
+
+.content {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  h3 {
+    font-weight: 500;
+    line-height: 1.2;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    @media only screen and (min-width: 768px) and (max-width: 1023px) {
+      font-size: 2rem;
+    }
+    @media only screen and (min-width: 300px) and (max-width: 767px) {
+      font-size: 2rem;
+    }
+  }
+  h5 {
+    font-size: 1.75rem;
+    font-weight: 500;
+  }
+  a {
+    text-decoration: underline;
+    font-size: 1.65rem;
+  }
+}
+
+// Add more styles as needed...
+.footer {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  h3 {
+    font-weight: 500;
+    font-size: 1.65rem;
+    text-transform: capitalize;
+  }
+  .iconGroup {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    a {
+      font-size: 1.7rem;
+      font-weight: 300;
+      &:hover {
+        transform: scale(1.25);
+      }
+    }
+  }
+}
