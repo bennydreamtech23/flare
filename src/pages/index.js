@@ -66,8 +66,8 @@ function Homepage({ posts, page }) {
           })}
         </div>
         <div className={Style.pagination}>
-          {page > 1 && <Link href={`/?page=${page - 1}`}>Previous Page</Link>}
-          <Link href={`/?page=${page + 1}`}>Next Page</Link>
+          {page > 1 && <Link href={`/?page=${page - 1}`}>Previous </Link>}
+          <Link href={`/?page=${page + 1}`}>Next</Link>
         </div>
         <AdBanner
           data-ad-slot="1052895740"
@@ -90,11 +90,11 @@ function Homepage({ posts, page }) {
           </div>
         </div>
       </main>
-              <AdBanner
-          data-ad-slot="1052895740"
-          data-ad-format="auto"
-          data-full-width-responsive="true"
-        />
+      <AdBanner
+        data-ad-slot="1052895740"
+        data-ad-format="auto"
+        data-full-width-responsive="true"
+      />
       <footer className={Style.footer}>
         <div className={Style.footerInnerContainer}>
           <p>

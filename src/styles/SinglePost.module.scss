@@ -1,4 +1,23 @@
 // SinglePost.module.scss
+.topHeader {
+  background: black;
+  padding: 1.5rem 0;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  .description {
+    font-size: 1.75rem;
+    line-height: 1.3;
+    width: 600px;
+    text-align: center;
+    @media only screen and (max-width: 480px) {
+      width: 100%;
+    }
+  }
+}
 
 .container {
   display: flex;
@@ -83,7 +102,7 @@
 .publishedDate {
   font-size: 1rem;
   font-weight: 300;
-  color: gray;
+  color: #fff;
   margin: 0;
 }
 
@@ -109,6 +128,11 @@
   a {
     text-decoration: underline;
     font-size: 1.65rem;
+  }
+  img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 }
 

@@ -26,6 +26,9 @@ const query = gql`
       content {
         html
       }
+      description {
+        html
+      }
       coverPhoto {
         id
         url
@@ -64,59 +67,67 @@ export async function getStaticProps({ params }) {
 
 export default function BlogPost({ post }) {
   return (
-    <main className={Style.container}>
-      <div className={Style.imgContainer}>
+    <main>
+      <div className={Style.topHeader}>
         <div
-          className={Style.coverImage}
-          style={{ backgroundImage: `url(${post.coverPhoto.url})` }}
-        ></div>
-      </div>
-      <div className={Style.contentContainer}>
-        <div className={Style.contentHeader}>
-          <h2 className={Style.title}>{post.title}</h2>
-          <div className={Style.authorInfo}>
-            <img
-              className={Style.avatar}
-              src={post.author.avatar.url}
-              alt="Author Avatar"
-            />
-            <div className={Style.authorDetails}>
-              <h6 className={Style.authorName}>{post.author.name}</h6>
-              <p className={Style.publishedDate}>{post.datePublished}</p>
-            </div>
+          className={Style.description}
+        dangerouslySetInnerHTML={{ __html: post.description.html }}
+        />
+        <div className={Style.authorInfo}>
+          <img
+            className={Style.avatar}
+            src={post.author.avatar.url}
+            alt="Author Avatar"
+          />
+          <div className={Style.authorDetails}>
+            <h6 className={Style.authorName}>{post.author.name}</h6>
+            <p className={Style.publishedDate}>{post.datePublished}</p>
           </div>
         </div>
-        <AdBanner
-          data-ad-slot="1052895740"
-          data-ad-format="auto"
-          data-full-width-responsive="true"
-        />
-        <div
-          className={Style.content}
-          dangerouslySetInnerHTML={{ __html: post.content.html }}
-        ></div>
-        <AdBanner
-          data-ad-slot="1052895740"
-          data-ad-format="auto"
-          data-full-width-responsive="true"
-        />
-        <footer className={Style.footer}>
-          <h3>share this article</h3>
-          <div className={Style.iconGroup}>
-            <a>
-              <BsInstagram />
-            </a>
-            <a>
-              <BsTiktok />
-            </a>
-            <a>
-              <BsTwitter />
-            </a>
-            <a>
-              <BsYoutube />
-            </a>
+      </div>
+      <div className={Style.container}>
+        <div className={Style.imgContainer}>
+          <div
+            className={Style.coverImage}
+            style={{ backgroundImage: `url(${post.coverPhoto.url})` }}
+          ></div>
+        </div>
+        <div className={Style.contentContainer}>
+          <div className={Style.contentHeader}>
+            <h2 className={Style.title}>{post.title}</h2>
           </div>
-        </footer>
+          <AdBanner
+            data-ad-slot="1052895740"
+            data-ad-format="auto"
+            data-full-width-responsive="true"
+          />
+          <div
+            className={Style.content}
+            dangerouslySetInnerHTML={{ __html: post.content.html }}
+          ></div>
+          <AdBanner
+            data-ad-slot="1052895740"
+            data-ad-format="auto"
+            data-full-width-responsive="true"
+          />
+          <footer className={Style.footer}>
+            <h3>share this article</h3>
+            <div className={Style.iconGroup}>
+              <a>
+                <BsInstagram />
+              </a>
+              <a>
+                <BsTiktok />
+              </a>
+              <a>
+                <BsTwitter />
+              </a>
+              <a>
+                <BsYoutube />
+              </a>
+            </div>
+          </footer>
+        </div>
       </div>
     </main>
   );
