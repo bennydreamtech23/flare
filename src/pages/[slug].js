@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { BsTiktok, BsTwitter, BsInstagram, BsYoutube } from "react-icons/bs";
 import { GraphQLClient, gql } from "graphql-request";
-
+import AdBanner from "../Components/AdBanner";
 const url = `${process.env.ENDPOINT}`;
 
 // instantiating a graphql client...
@@ -86,10 +86,20 @@ export default function BlogPost({ post }) {
             </div>
           </div>
         </div>
+        <AdBanner
+          data-ad-slot="1052895740"
+          data-ad-format="auto"
+          data-full-width-responsive="true"
+        />
         <div
           className={Style.content}
           dangerouslySetInnerHTML={{ __html: post.content.html }}
         ></div>
+        <AdBanner
+          data-ad-slot="1052895740"
+          data-ad-format="auto"
+          data-full-width-responsive="true"
+        />
         <footer className={Style.footer}>
           <h3>share this article</h3>
           <div className={Style.iconGroup}>

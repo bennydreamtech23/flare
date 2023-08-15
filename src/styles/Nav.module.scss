@@ -34,7 +34,7 @@
     justify-content: space-between;
     border: 1px solid #ccc;
     padding: 1rem 1.5rem;
-    @media only screen and (max-width: 360px) {
+    @media only screen and (max-width: 480px) {
       display: none;
     }
     input {

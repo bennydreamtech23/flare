@@ -5,6 +5,8 @@ import BlogCard from "../Components/BlogPost";
 import SubscribeForm from "../Components/Subscribe.js";
 import { GraphQLClient, gql } from "graphql-request";
 import { SEO } from "../Components/SEO/index";
+import AdBanner from "../Components/AdBanner";
+
 const url = `${process.env.ENDPOINT}`;
 const graphConnect = new GraphQLClient(url);
 
@@ -67,6 +69,11 @@ function Homepage({ posts, page }) {
           {page > 1 && <Link href={`/?page=${page - 1}`}>Previous Page</Link>}
           <Link href={`/?page=${page + 1}`}>Next Page</Link>
         </div>
+        <AdBanner
+          data-ad-slot="1052895740"
+          data-ad-format="auto"
+          data-full-width-responsive="true"
+        />
         <div className={Style.taglineBox}>
           <h1>ARCHIVES</h1>
           <div className={Style.tag}>
@@ -83,6 +90,11 @@ function Homepage({ posts, page }) {
           </div>
         </div>
       </main>
+              <AdBanner
+          data-ad-slot="1052895740"
+          data-ad-format="auto"
+          data-full-width-responsive="true"
+        />
       <footer className={Style.footer}>
         <div className={Style.footerInnerContainer}>
           <p>
