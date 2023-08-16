@@ -35,7 +35,7 @@ function Nav() {
         setEmail("");
       } else {
         console.log("Subscription failed");
-        setEmail("")
+        setEmail("");
       }
     } catch (error) {
       console.error(error);
@@ -58,7 +58,7 @@ function Nav() {
             <input
               type="email"
               value={email}
-              placeholder="Subscribe"
+              placeholder="Enter your email to subscribe"
               required
               onChange={(e) => setEmail(e.target.value)}
             />

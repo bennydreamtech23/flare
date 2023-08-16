@@ -77,16 +77,65 @@ function Homepage({ posts, page }) {
         <div className={Style.taglineBox}>
           <h1>ARCHIVES</h1>
           <div className={Style.tag}>
-            <p>.Home Essential</p>
-            <p>.Quick Cleanups</p>
-            <p>.Kitchen Needs</p>
-            <p>.Relief</p>
-            <p>.Instant Memories</p>
-            <p>.Bathroom Accessories</p>
-            <p>.Valueable Care</p>
-            <p>Hygiene Tools</p>
-            <p>Cooking</p>
-            <p>Shopping</p>
+            <div className={Style.tagTitle}>
+              <div></div>
+              <strong>Home Essential</strong>
+            </div>
+            <div className={Style.tagTitle}>
+              {" "}
+              <div></div>
+              <strong>Quick Cleanups</strong>
+            </div>
+            <div className={Style.tagTitle}>
+              {" "}
+              <div></div>
+              <strong>Kitchen Needs</strong>
+            </div>
+            <div className={Style.tagTitle}>
+              {" "}
+              <div></div>
+              <strong>Relief</strong>
+            </div>
+            <div className={Style.tagTitle}>
+              {" "}
+              <div></div>
+              <strong>Instant Memories</strong>
+            </div>
+            <div className={Style.tagTitle}>
+              {" "}
+              <div></div>
+              <strong> Accessories</strong>
+            </div>
+            <div className={Style.tagTitle}>
+              {" "}
+              <div></div>
+              <strong>Technology</strong>
+            </div>
+            <div className={Style.tagTitle}>
+              {" "}
+              <div></div>
+              <strong>Hygiene Tools</strong>
+            </div>
+            <div className={Style.tagTitle}>
+              {" "}
+              <div></div>
+              <strong>Cooking</strong>
+            </div>
+            <div className={Style.tagTitle}>
+              {" "}
+              <div></div>
+              <strong>Fashion</strong>
+            </div>
+            <div className={Style.tagTitle}>
+              {" "}
+              <div></div>
+              <strong>Shopping</strong>
+            </div>
+            <div className={Style.tagTitle}>
+              {" "}
+              <div></div>
+              <strong>Jewelleries</strong>
+            </div>
           </div>
         </div>
       </main>

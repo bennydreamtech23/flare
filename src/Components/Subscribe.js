@@ -49,7 +49,7 @@ const SubscribeForm = () => {
     <div>
       <form onSubmit={handleSubmit} className={Style.form}>
         <input
-          placeholder="Subscribe"
+          placeholder="Enter your email to subscribe"
           type="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
