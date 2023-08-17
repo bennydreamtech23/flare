@@ -25,7 +25,7 @@ const BlogPost = ({ post }) => {
         <Link href={post.slug}>
           <h2>{post.title}</h2>
         </Link>
-        <div className={Style.authorBox}>
+          <div className={Style.authorBox}>
           <div className={Style.avatarImg}>
             <Image
               src={post.author.avatar.url}
@@ -40,6 +40,7 @@ const BlogPost = ({ post }) => {
             {post.datePublished}
           </Moment>
         </div>
+      
 <div
         className={Style.content}
         dangerouslySetInnerHTML={{ __html: truncatedDescription }}
