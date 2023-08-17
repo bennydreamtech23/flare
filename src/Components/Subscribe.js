@@ -24,7 +24,10 @@ const SubscribeForm = () => {
             Email: email,
             _subject: "Subscribe to newsletter",
             _captcha: true,
+            _blacklist: "spammy pattern, banned term, phrase",
             _template: "box",
+            _autoresponse:
+              "Thank you for Subscribing to flare, we will keep you updated",
           }),
         }
       );
