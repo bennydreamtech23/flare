@@ -1,10 +1,22 @@
- <Script src="https://www.googletagmanager.com/gtag/js?id=G-VFSB9R5BHR" />
-      <Script id="google-analytics">
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
- 
-          gtag('config', 'G-VFSB9R5BHR');
-        `}
-      </Script>
+import { useEffect } from "react";
+
+const AdSense = ({ adSlot }) => {
+  useEffect(() => {
+    if (window) {
+      (window.adsbygoogle = window.adsbygoogle || []).push({});
+    }
+  }, []);
+
+  return (
+    <ins
+      className="adsbygoogle"
+      style={{ display: "block" }}
+      data-ad-client="ca-pub-6917584905087010" // Replace with your publisher ID
+      data-ad-slot={adSlot}
+      data-ad-format="auto"
+      data-full-width-responsive="true"
+    ></ins>
+  );
+};
+
+export default AdSense;
