@@ -1,9 +1,9 @@
 import Style from "../styles/SinglePost.module.scss";
+import AdSense from "../Components/AdSense";
 import Image from "next/image";
 import Link from "next/link";
 import { BsTiktok, BsTwitter, BsInstagram, BsYoutube } from "react-icons/bs";
 import { GraphQLClient, gql } from "graphql-request";
-import AdBanner from "../Components/AdBanner";
 const url = `${process.env.ENDPOINT}`;
 
 // instantiating a graphql client...
@@ -69,6 +69,7 @@ export default function BlogPost({ post }) {
   return (
     <main>
       <div className={Style.topHeader}>
+
         <div
           className={Style.description}
           dangerouslySetInnerHTML={{ __html: post.description.html }}
@@ -98,20 +99,12 @@ export default function BlogPost({ post }) {
           <div className={Style.contentHeader}>
             <h2 className={Style.title}>{post.title}</h2>
           </div>
-          <AdBanner
-            data-ad-slot="1052895740"
-            data-ad-format="auto"
-            data-full-width-responsive="true"
-          />
+<AdSense adSlot="1052895740" />
           <div
             className={Style.content}
             dangerouslySetInnerHTML={{ __html: post.content.html }}
           ></div>
-          <AdBanner
-            data-ad-slot="1052895740"
-            data-ad-format="auto"
-            data-full-width-responsive="true"
-          />
+
           <footer className={Style.footer}>
             <h3>share this article</h3>
             <div className={Style.iconGroup}>
