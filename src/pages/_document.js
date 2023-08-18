@@ -6,19 +6,18 @@ export default function Document() {
     <Html lang="en">
       <Head>
         <Script
-          id="google-ads-script"
           async
           src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${process.env.NEXT_PUBLIC_GOOGLE_ADS_CLIENT_ID}`}
           crossOrigin="anonymous"
         />
 
         <Script
-          id="google-analytics-script"
           strategy="lazyOnload"
           src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
         />
 
-        <Script id="google-analytics-config" strategy="lazyOnload">
+        <Script 
+          strategy="lazyOnload">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
